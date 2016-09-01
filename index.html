@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home work</title>
+</head>
+<body>
+    <div id="game">
+
+    </div>
+</body>
+<script src="dist/build.js"></script>
+<script>
+    var gameInstance = new Game({
+        renderTo: '#game',
+        connection: {
+            api_url: 'http://localhost:8080',
+            protocol_version: 1
+        }
+    });
+</script>
+</html>
