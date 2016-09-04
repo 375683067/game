@@ -9,15 +9,24 @@
   "author": "a.tsarenko",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
     "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.24.0",
     "es6-event-emitter": "^1.5.1",
     "isomorphic-fetch": "^2.2.1",
+    "query-string": "^4.2.3",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "style-loader": "^0.13.1",
+    "underscore": "^1.8.3",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0"
+  },
+  "devDependencies": {
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3"
   }
 }

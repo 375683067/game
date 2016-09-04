@@ -5,17 +5,39 @@
     <title>Home work</title>
 </head>
 <body>
-    <div id="game">
-
-    </div>
+    <div id="game1"></div>
+    <div id="game2"></div>
 </body>
 <script src="dist/build.js"></script>
 <script>
     var gameInstance = new Game({
-        renderTo: '#game',
+        renderTo: '#game1',
         connection: {
             api_url: 'http://localhost:8080',
             protocol_version: 1
+        }
+    });
+    var gameInstance = new Game({
+        renderTo: '#game2',
+        connection: {
+            api_url: 'http://localhost:8080',
+            protocol_version: 1
+        },
+        extendConfiguration: {
+            symbols: {
+                'A': {
+                    img: 'images/1.jpg',
+                    text: '1'
+                },
+                'B': {
+                    img: 'images/2.jpg',
+                    text: ''
+                },
+                'C': {
+                    text: '3',
+                    img: 'images/3.jpg'
+                }
+            }
         }
     });
 </script>
