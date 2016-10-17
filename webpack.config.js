@@ -1,4 +1,5 @@
 var path = require('path');
+var JsDocPlugin = require('jsdoc-webpack-plugin');
 module.exports = {
 	entry: "./src/Game.js",
 	output: {
@@ -23,9 +24,18 @@ module.exports = {
 				test: /\.less$/,
 				loader: "style!css!autoprefixer!less",
 				exclude: /(node_modules|dist)/,
+			},
+			{
+				test: /\.(jpe?g|png|gif)$/i,
+				loader: 'file?name=image/[name].[ext]'
 			}
 		]
 	},
+	// plugins: [
+	// 	new JsDocPlugin({
+	// 		conf: './jsdoc.conf'
+	// 	})
+	// ],
 	watch: true,
 	devtool: 'sourcemap'
 };

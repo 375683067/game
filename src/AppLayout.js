@@ -9,9 +9,8 @@ import SpinButton from 'SpinButton/index.js';
 import LineCount from 'LineCount/index.js';
 import _ from 'underscore';
 import layoutLess from 'layout.less';
-
-
-export default class AppLayout extends React.Component {
+import Wheel from 'Wheel/wheel.js';
+class AppLayout extends React.Component {
 	/**
 	 *
 	 * @param props
@@ -32,32 +31,15 @@ export default class AppLayout extends React.Component {
 		}
 	}
 
+	/**
+	 * method that render application layout
+	 * @return {XML}
+	 */
 	render() {
 		return <div id="lt-game">
-			<div className="lt-line-count">
-				<LineCount betManager={this.props.betManager} serverConnection={this.props.serverConnection}></LineCount>
-			</div>
-			<div className="lt-line-bet-editor">
-				<CoinCount  serverConnection={this.props.serverConnection} betManager={this.props.betManager}></CoinCount>
-			</div>
-			<div className="lt-coins-layout">
-				<Coins serverConnection={this.props.serverConnection}></Coins>
-			</div>
-			<div className="lt-balance-layout">
-				<Balance serverConnection={this.props.serverConnection}></Balance>
-			</div>
-			<div className="lt-symbols">
-				<SymbolsMonitor configuration={this.configuration.symbols} serverConnection={this.props.serverConnection}></SymbolsMonitor>
-			</div>
-			<div className="lt-error-messages">
-				<ErrorMessages serverConnection={this.props.serverConnection}></ErrorMessages>
-			</div>
-			<div className="lt-game-status">
-				<GameStatus serverConnection={this.props.serverConnection}></GameStatus>
-			</div>
-			<div className="lt-spin-button">
-				<SpinButton serverConnection={this.props.serverConnection} betManager={this.props.betManager}></SpinButton>
-			</div>
+			<Wheel/>
 		</div>
 	}
 };
+
+export default AppLayout;

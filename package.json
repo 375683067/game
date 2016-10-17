@@ -15,7 +15,10 @@
     "babel-preset-react": "^6.11.1",
     "css-loader": "^0.24.0",
     "es6-event-emitter": "^1.5.1",
+    "file-loader": "^0.9.0",
     "isomorphic-fetch": "^2.2.1",
+    "jsdoc": "^3.4.2",
+    "less-loader": "^2.2.3",
     "query-string": "^4.2.3",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
@@ -25,7 +28,9 @@
     "webpack-dev-server": "^1.15.0"
   },
   "devDependencies": {
+    "jsdoc-loader": "0.0.2",
     "less": "^2.7.1",
-    "less-loader": "^2.2.3"
+    "less-loader": "^2.2.3",
+    "webpack": "^1.13.2"
   }
 }

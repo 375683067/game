@@ -6,7 +6,7 @@ import BetManager from 'BetManager/index.js';
 /**
  * @class - main of game
  */
-module.exports = class Game {
+class Game {
 	/**
 	 * @constructor
 	 * @param {object} options
@@ -20,4 +20,6 @@ module.exports = class Game {
 		serverConnection.send('getCurrentState');
 		ReactDOM.render(<App configuration={options.extendConfiguration} serverConnection={serverConnection} betManager={betManager}></App>, document.querySelectorAll(options.renderTo)[0]);
 	}
-};
+}
+
+module.exports = Game;

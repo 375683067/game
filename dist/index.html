@@ -6,19 +6,11 @@
 </head>
 <body>
     <div id="game1"></div>
-    <div id="game2"></div>
 </body>
-<script src="dist/build.js"></script>
+<script src="build.js"></script>
 <script>
     var gameInstance = new Game({
         renderTo: '#game1',
-        connection: {
-            api_url: 'http://demo-slot-server.herokuapp.com',
-            protocol_version: 1
-        }
-    });
-    var gameInstance = new Game({
-        renderTo: '#game2',
         connection: {
             api_url: 'http://demo-slot-server.herokuapp.com',
             protocol_version: 1
